@@ -77,11 +77,6 @@ app.get('/', async (request, response) => {
     svg.src = svgData;
 });
 
-app.get('/sign', (_, response) => {
-    response.setHeader('Content-Type', 'image/png');
-    response.sendFile(path.join(__dirname, 'images/sign.png'));
-});
-
 app.listen(port, (err) => {
     if (err) {
         return console.log('something bad happened', err)
