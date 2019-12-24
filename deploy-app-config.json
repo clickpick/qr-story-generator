@@ -1,0 +1,14 @@
+{
+  "prod": {
+    "user": "forge",
+    "host": "ezavalishin.ru",
+    "port": "22",
+    "files": "index.js images/ package.json",
+    "path": "/home/forge/story.qr-game.ezavalishin.ru",
+    "pre-deploy-local": "yarn",
+    "pre-deploy-remote": "pm2 restart story.qr",
+    "post-deploy": ""
+  },
+  "dev": {},
+  "staging": {}
+}
