@@ -1,0 +1,17 @@
+{
+  "name": "node-png",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "prod": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vkontakte/vk-qr": "^2.0.9",
+    "canvas": "^2.6.1",
+    "express": "^4.17.1"
+  }
+}
