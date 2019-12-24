@@ -36,6 +36,12 @@ const userPicPrepare = (url) => new Promise((resolve, reject) => {
 
 app.get('/', async (request, response) => {
     const { token, userPic } = request.query;
+
+    if (!token) {
+        response.send('hui');
+        return;
+    }
+
     const qr = vkQr.createQR(`${process.env.APP_LINK}#token=${token}`, {
         qrSize: 600,
         isShowLogo: userPic && userPic.indexOf('https://vk.com/images/camera_200.png') === -1,
