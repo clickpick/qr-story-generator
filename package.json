@@ -12,6 +12,7 @@
   "dependencies": {
     "@vkontakte/vk-qr": "^2.0.9",
     "canvas": "^2.6.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   }
 }

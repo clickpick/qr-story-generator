@@ -3,11 +3,10 @@ const vkQr = require('@vkontakte/vk-qr');
 const { createCanvas, Image } = require('canvas');
 const path = require('path');
 
-const APP_ID = 7150862;
-const APP_LINK = `https://vk.com/app${APP_ID}`;
+require('dotenv').config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const userPicPrepare = (url) => new Promise((resolve, reject) => {
     const img = new Image();
@@ -37,7 +36,7 @@ const userPicPrepare = (url) => new Promise((resolve, reject) => {
 
 app.get('/', async (request, response) => {
     const { token, userPic } = request.query;
-    const qr = vkQr.createQR(`${APP_LINK}#token=${token}`, {
+    const qr = vkQr.createQR(`${process.env.APP_LINK}#token=${token}`, {
         qrSize: 600,
         isShowLogo: userPic && userPic.indexOf('https://vk.com/images/camera_200.png') === -1,
         isShowBackground: true,
